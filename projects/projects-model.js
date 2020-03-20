@@ -17,3 +17,21 @@ module.exports = {
       .where({ id })
       .first();
   }
+
+
+function addProject(project) {
+    return db("projects").insert(project);
+  }
+
+
+  function updateProject(id, changes) {
+    return db("projects")
+      .where({ id })
+      .update(changes);
+  }
+  
+  function removeProject(id) {
+    return db("projects")
+      .where('id', id)
+      .del();
+  }
