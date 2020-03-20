@@ -13,10 +13,10 @@ function getTasks() {
         "p.name as projectname",
         "p.description as projectdescription",
         "t.id as task_id",
-        "t.description",
-        "t.notes",
+        "t.description as task_description",
+        "t.notes as task_notes",
         "t.project_id",
-        "t.completed"
+        "t.completed as task_completed"
       );
   }
   
