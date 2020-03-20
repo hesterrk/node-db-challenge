@@ -36,6 +36,29 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
+//GET full 
+
+
+router.get("/:id/full", async (req, res, next) => {
+  try {
+    const { id } = req.params;
+
+    const project = await projects.getProjectAll(id);
+    if (project) {
+      res.json(project);
+    } else {
+      res.status(404).json({ message: "Could not find entire project with given id." });
+    }
+  } catch (error) {
+    next(error);
+  }
+});
+
+
+
+
+
+
 // --> POST PROJECT HERE
 
 router.post("/", async (req, res, next) => {
