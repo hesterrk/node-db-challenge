@@ -40,11 +40,22 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+
+-Databases is a collection of data organized for easy retrieval and manipulation. Relational Databases are databases which store “related” data. Data is stored in tabular format grouped into rows and columns
+-SQL in contrast is is the standard language used to manage databases and the data within them. Its a computer language for accessing (retrieval) and manipulating database systems. SQL is relational database specific. Its optimized for the sole role of querying data. 
+
 - [ ] Why do tables need a `primary key`?
 
+ -To uniquely identify each row which represnts each entry into the database 
+
+
 - [ ] What is the name given to a table column that references the primary key on another table.
+-Foreign Key 
 
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+-When table A can link to many rows in table B and table A can link to many rows in table B. 
+-We need a third table as a joining table, for the purpose of holding the foreign key reference for the tables (or more)
 
 ## Minimum Viable Product
 
@@ -135,9 +146,9 @@ Add an endpoint for retrieving a `project` by its `id` that returns an object wi
 }
 ```
 
-Add the remaining CRUD operations for projects and tasks.
+Add the remaining CRUD operations for projects and tasks. X
 
-Use `knex` to add _data seeding_ scripts for projects and tasks.
+Use `knex` to add _data seeding_ scripts for projects and tasks. X
 
 Add support for the concept of `contexts`. A context is something like _at home_, _at work_ or _at computer_. The idea is that some tasks require one or more `contexts` in order to be worked on. For example, the task of _file income taxes_ may require that you are _at home_, _at computer_ and _online_ so if you are _at work_ and look at the list of pending tasks you could do in your current context, filing your taxes will not be one of them.
 
